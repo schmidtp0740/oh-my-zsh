@@ -12,7 +12,10 @@ alias icdoo='icdo toolchain-open'
 # ic dev operations
 alias icd='ic dev'
 alias icdc='icd create --trace'
+alias icdb='icd build --trace'
+alias icdr='icd run --trace'
+alias icdd='icd deploy --trace'
 
 # ic ks operations
 alias ick='ic ks'
-alias ickc='ick cluster-config'
+alias ickc='ick cluster-config --export --cluster $1'
