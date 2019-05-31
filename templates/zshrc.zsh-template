@@ -73,6 +73,7 @@ git
 scd
 ibmcloud
 zsh-autosuggestions
+kubectl
 )
 
 source $ZSH/oh-my-zsh.sh
