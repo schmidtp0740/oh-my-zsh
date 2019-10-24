@@ -24,7 +24,7 @@ ZSH_THEME="frisk"
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
@@ -72,8 +72,11 @@ plugins=(
 git
 scd
 ibmcloud
+terraform
 zsh-autosuggestions
 kubectl
+docker
+docker-compose
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -107,4 +110,16 @@ source $ZSH/oh-my-zsh.sh
 # PATH
 export GOPATH=$HOME/go
 export PATH=$HOME/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:/usr/local/go/bin:$GOPATH/bin:$GOPATH/src/github.com/jteeuwen/go-bindata/go-bindata:$PATH
+source ~/_istioctl
+autoload -Uz compinit && compinit -i
 
+
+export PATH=/usr/local/bin:$PATH
+
+[[ -e "/Users/schmidtp/lib/oracle-cli/lib/python3.7/site-packages/oci_cli/bin/oci_autocomplete.sh" ]] && source "/Users/schmidtp/lib/oracle-cli/lib/python3.7/site-packages/oci_cli/bin/oci_autocomplete.sh"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/schmidtp/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/schmidtp/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/schmidtp/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/schmidtp/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
